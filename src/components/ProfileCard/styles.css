@@ -1,0 +1,20 @@
+.profileCard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(239, 255, 236);
+    border: 1px solid rgb(0, 134, 63);
+    border-radius: 4px;
+}
+.userTitle {
+    font-size: 24px;
+    color: rgb(11, 95, 11);
+}
+.userPretitle {
+    font-size: 18px;
+    color: rgb(116, 108, 22);
+    font-weight: bold;
+}
+

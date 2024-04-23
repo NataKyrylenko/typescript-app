@@ -1,0 +1,18 @@
+.feedback-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(230, 232, 248);
+    padding: 20px;
+}
+.feedback-components > p {
+    font-size: 28px;
+    font-weight: bold;
+}
