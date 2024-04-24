@@ -1,10 +1,10 @@
-type InputType = "button" | "checkbox" | "email" | "number" | "password" | "radio" | "reset" | "search" | "tel" | "text" | "time" | undefined;
+//type InputType = "button" | "checkbox" | "email" | "number" | "password" | "radio" | "reset" | "search" | "tel" | "text" | "time" | undefined;
 
 export interface InputProps {
     name: string,
-    type?: InputType,
+    type?: string,
     placeholder: string,
     label:string,
-    onInputChange: () => void,
+    onInputChange?: () => void,
 
 }

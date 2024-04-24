@@ -1,7 +1,8 @@
 import "./styles.css";
+import { User } from "./types";
 
 function ProfileCard() {
-  const userData = {
+  const userData: User = {
     avatar: "https://img.freepik.com/premium-vector/student-avatar-illustration-user-profile-icon-youth-avatar_118339-4406.jpg?w=740",
     userName: "Alex Parker",
     profession: "Software Engineer specializing in artificial intelligence and robotics",
