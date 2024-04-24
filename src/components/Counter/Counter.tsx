@@ -1,17 +1,10 @@
 import "./styles.css";
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
 import { useState } from "react";
+import { CounterProps } from "./types";
 
-function Counter() {
-  const [count, setCount] = useState<number>(0);
 
-  const onMinus = ():void => {
-    setCount((prevValue) => prevValue - 1);
-  };
-
-  const onPlus = ():void => {
-    setCount((prevValue) => prevValue + 1);
-  };
+function Counter({count, onMinus, onPlus} : CounterProps) {
 
   return (
     <div className="counter-wrapper">
