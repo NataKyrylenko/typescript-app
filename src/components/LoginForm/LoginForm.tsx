@@ -1,15 +1,16 @@
-import "./styles.css";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
+import { LoginFormComponent, LoginFormTitle } from "./styles";
+
 
 function LoginForm(){
     return(
-        <form className="login-form">
-            <h2 className="form-title">Login form</h2>
+        <LoginFormComponent>
+            <LoginFormTitle>Login form</LoginFormTitle>
             <Input name="enter" type="text" placeholder="Enter your email" label="Email" />
             <Input name="password" type="text" placeholder="Enter your password" label="Password" />
             <Button name = "Login"/>
-        </form>
+        </LoginFormComponent>
         
     )
 

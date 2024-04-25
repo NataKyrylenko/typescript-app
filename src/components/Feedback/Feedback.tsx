@@ -1,7 +1,8 @@
-import "./styles.css";
+
 import Button from "components/Button/Button";
 import { useState } from "react";
 import { FeedbackProps } from "./types";
+import { FeedbackContainer, FeedbackComponent, FeedbackCounter } from "./styles";
 
 function Feedback({
   countLike,
@@ -11,19 +12,19 @@ function Feedback({
   resetResult,
 }: FeedbackProps) {
   return (
-    <div className="feedback-container">
-      <div className="feedback-components">
-        <p>{countLike}</p>
+    <FeedbackContainer>
+      <FeedbackComponent>
+        <FeedbackCounter>{countLike}</FeedbackCounter>
         <Button name="Like" onButtonClick={onLike} />
-      </div>
-      <div className="feedback-components">
-        <p>{countDislike}</p>
+      </FeedbackComponent>
+      <FeedbackComponent>
+        <FeedbackCounter>{countDislike}</FeedbackCounter>
         <Button name="Dislike" onButtonClick={onDislike} />
-      </div>
-      <div className="feedback-components">
+      </FeedbackComponent>
+      <FeedbackComponent>
         <Button name="Reset Results" onButtonClick={resetResult} />
-      </div>
-    </div>
+      </FeedbackComponent>
+    </FeedbackContainer>
   );
 }
 

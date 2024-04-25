@@ -1,17 +1,17 @@
-import "./styles.css";
+import { InputComponent,  LabelElement, InputElement} from "./styles";
 import { InputProps } from "./types";
 
 function Input({name,type, placeholder, label, onInputChange}: InputProps) {
   return (
-    <div className="input-wrapper">
-        <label>{label}</label>
-      <input
+    <InputComponent>
+        <LabelElement>{label}</LabelElement>
+      <InputElement 
         name={name}
         type={type}
         placeholder={placeholder} 
-        onChange={onInputChange}
-      />
-    </div>
+        onChange={onInputChange}>
+      </InputElement>
+    </InputComponent>
   );
 }
 

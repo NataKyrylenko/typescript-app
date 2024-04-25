@@ -1,15 +1,18 @@
-import "./styles.css";
+import {
+  AnimalCardComponent,
+  AnimalCardTitle,
+  AnimalCardText,
+  AnimalCardImg,
+} from "./styles";
 import { AnimalCardProps } from "./types";
 
-
-
-function AnimalCard({animalData}: AnimalCardProps){
-    return (
-        <div className="animal-card-wrapper">
-        <h2>{animalData.name}</h2>
-        <p>{animalData.species}</p>
-        <img src={animalData.image} />
-    </div>
-    );
+function AnimalCard({ animalData }: AnimalCardProps) {
+  return (
+    <AnimalCardComponent>
+      <AnimalCardTitle>{animalData.name}</AnimalCardTitle>
+      <AnimalCardText>{animalData.species}</AnimalCardText>
+      <AnimalCardImg src={animalData.image}></AnimalCardImg>
+    </AnimalCardComponent>
+  );
 }
 export default AnimalCard;
