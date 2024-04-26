@@ -15,4 +15,8 @@ export const InputElement = styled.input`
     border: 1px solid hsl(0, 0%, 25%, 1);
     border-radius: 4px;
     color:#1E1E1E;
+
+    &::placeholder{
+        color: #6f6f6f;
+    }
 `;
