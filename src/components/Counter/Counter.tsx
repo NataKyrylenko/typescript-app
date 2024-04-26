@@ -1,21 +1,21 @@
-import "./styles.css";
 import Button from "components/Button/Button";
 import { useState } from "react";
 import { CounterProps } from "./types";
+import { CounterComponent,  ButtonControl, CounterElement} from "./styles";
 
 
 function Counter({count, onMinus, onPlus} : CounterProps) {
 
   return (
-    <div className="counter-wrapper">
-      <div className="button-control">
+    <CounterComponent>
+      <ButtonControl>
         <Button onButtonClick={onMinus} name="-" />
-      </div>
-      <p>{count}</p>
-      <div className="button-control">
+      </ButtonControl>
+      <CounterElement></CounterElement>
+      <ButtonControl>
         <Button onButtonClick={onPlus} name="+" />
-      </div>
-    </div>
+      </ButtonControl>
+    </CounterComponent>
   );
 }
 
