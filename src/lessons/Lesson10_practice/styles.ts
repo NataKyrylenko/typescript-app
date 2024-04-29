@@ -60,5 +60,5 @@ flex-direction: row;
 
  export const SpinnerContainer = styled.div<SpinnerContainerProps>`
  ${commonContainer}
- display: ${({isLoading}) => isLoading ? 'flex' : 'none'};
+ opacity: ${({isLoading}) => isLoading ? '1' : '0'};
  `;

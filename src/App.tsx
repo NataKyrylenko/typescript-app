@@ -1,4 +1,4 @@
-import Lesson10 from "lessons/Lesson10_practice/Lesson10";
+
 import GlobalStyles from "styles/GlobalStyles";
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
