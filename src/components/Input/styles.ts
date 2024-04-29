@@ -4,6 +4,7 @@ export const InputComponent = styled.div`
  display: flex;
     flex-direction: column;
     gap: 4px;
+     width: 100%;
 `;
 
 export const LabelElement = styled.label`
@@ -11,6 +12,7 @@ export const LabelElement = styled.label`
 `;
 
 export const InputElement = styled.input`
+   
     padding: 12px;
     border: 1px solid hsl(0, 0%, 25%, 1);
     border-radius: 4px;
