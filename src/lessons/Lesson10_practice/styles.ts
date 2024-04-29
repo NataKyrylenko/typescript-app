@@ -5,6 +5,10 @@ interface InfoContainerProps {
     isShowCatInfo: boolean
 }
 
+interface SpinnerContainerProps{
+    isLoading: boolean
+}
+
 const randomColor = () => {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -52,4 +56,9 @@ flex-direction: row;
  font-size: 22px;
     color: ${randomColor};
 
+ `;
+
+ export const SpinnerContainer = styled.div<SpinnerContainerProps>`
+ ${commonContainer}
+ display: ${({isLoading}) => isLoading ? 'flex' : 'none'};
  `;
