@@ -18,7 +18,9 @@ import {
         setInputValue2(event.target.value);
     }
 
+    // (https://catfact.ninja/fact)
 
+    
     const getActivity = async() => {
       try{
       const response = await fetch('https://www.boredapi.com/api/activity')

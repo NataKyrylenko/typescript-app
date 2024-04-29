@@ -3,7 +3,7 @@ import { ButtonProps } from './types'
 
 function Button({ name, type = "button", disabled = false, onButtonClick }: ButtonProps) {
   return (
-      <StyledButton disabled={disabled}>{name}</StyledButton>
+      <StyledButton disabled={disabled} onClick={onButtonClick}>{name}</StyledButton>
   );
 }
 
