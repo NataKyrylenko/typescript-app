@@ -1,7 +1,14 @@
 import { InputComponent, LabelElement, InputElement } from "./styles";
 import { InputProps } from "./types";
 
-function Input({ name, type, placeholder, label, onInputChange }: InputProps) {
+function Input({
+  name,
+  type,
+  placeholder,
+  label,
+  onInputChange,
+  value,
+}: InputProps) {
   return (
     <InputComponent>
       <LabelElement>{label}</LabelElement>
@@ -9,8 +16,9 @@ function Input({ name, type, placeholder, label, onInputChange }: InputProps) {
         name={name}
         type={type}
         placeholder={placeholder}
-        onChange={onInputChange}>
-        </InputElement>
+        onChange={onInputChange}
+        value={value}
+      ></InputElement>
     </InputComponent>
   );
 }

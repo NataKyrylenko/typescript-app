@@ -8,5 +8,5 @@ export interface InputProps {
     placeholder: string,
     label?:string,
     onInputChange?: (event:ChangeEvent<HTMLInputElement>) => void,
-
+    value: string;
 }

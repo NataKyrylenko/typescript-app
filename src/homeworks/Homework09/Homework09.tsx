@@ -24,8 +24,8 @@ function Homework09 () {
 
     return (
     <Homework09Container>
-        <Input name="first text" type="text" placeholder="Input text 1" label='first text' onInputChange={onChangeInput1}/>
-        <Input name="second text" type="text" placeholder="Input text 2" label='second text' onInputChange={onChangeInput2}/>
+        <Input value={inputValue1} name="first text" type="text" placeholder="Input text 1" label='first text' onInputChange={onChangeInput1}/>
+        <Input value={inputValue2} name="second text" type="text" placeholder="Input text 2" label='second text' onInputChange={onChangeInput2}/>
         <Button name="Send text" onButtonClick={buttonClick}/>
         <ResultContainer isShowResult={isShowResult}>
             <ResultElement>{inputValue1}</ResultElement>
