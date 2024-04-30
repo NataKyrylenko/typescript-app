@@ -1,4 +1,3 @@
-
 import GlobalStyles from "styles/GlobalStyles";
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
@@ -9,7 +8,9 @@ import GlobalStyles from "styles/GlobalStyles";
 //import Lesson09 from 'lessons/lesson09/Lesson09';
 //import Homework09 from 'homeworks/Homework09/Homework09';
 //import Lesson10 from "lessons/Lesson10_practice/Lesson10";
-import Lesson11 from "lessons/lesson11/Lesson11";
+//import Lesson11 from "lessons/lesson11/Lesson11";
+import Homework11 from "homeworks/Homework11/Homework11";
+
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <Lesson09/> */}
       {/* <Homework09/> */}
       {/* <Lesson10/> */}
-      <Lesson11/>
+      {/* <Lesson11/> */}
+      <Homework11/>
     </>
   );
 }
