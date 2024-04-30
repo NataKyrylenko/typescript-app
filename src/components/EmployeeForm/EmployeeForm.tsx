@@ -11,7 +11,7 @@ function EmployeeForm() {
       surname: "",
       age: "",
       position: "",
-      isTerms: "",
+      isTerms: "false",
     } as EmployeeFormValues,
     onSubmit: (values: EmployeeFormValues) => {
       console.log(values);
