@@ -1,4 +1,5 @@
 import Button from "components/Button/Button";
+import {v4} from 'uuid';
 import {
   ButtonsContainer,
   InfoContainer,
@@ -11,12 +12,11 @@ import Spinner from "components/Spinner/Spinner";
 
 function Lesson10() {
   const [info, setInfo] = useState<string[]>([]);
-  const [isShowCatInfo, setIsShowCatInfo] = useState<boolean>(false);
-
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getCatData = async () => {
     try {
+      setIsLoading(true);
       const response = await fetch("https://catfact.ninja/fact");
       const result = await response.json();
 
@@ -26,7 +26,7 @@ function Lesson10() {
         });
       } else {
         setInfo((prevInfo) => [...prevInfo, result.fact]);
-        setIsShowCatInfo(true);
+        
       }
     } catch (error) {
       console.log(error);
@@ -39,29 +39,30 @@ function Lesson10() {
     getCatData();
   }, []);
 
-  const showCatlData = () => {
-    getCatData();
-    setIsLoading(true);
-  }
+  const catFactElement = info.map((info:string) => {
+     return <InfoText key={v4()}>{info}</InfoText>
+  })
+
+  // const showCatlData = () => {
+  //   getCatData();
+  //   setIsLoading(true);
+  // }
   const deleteAllData = () => {
     setInfo([]);
-    setIsShowCatInfo(false);
+    //setIsShowCatInfo(false);
   }
 
   return (
     <Lesson10Wrapper>
+      
       <ButtonsContainer>
-        <Button name="GET MORE INFO" onButtonClick={showCatlData}></Button>
+        <Button name="GET MORE INFO" onButtonClick={getCatData}></Button>
         <Button name="DELETE ALL DATA" onButtonClick={deleteAllData}></Button>
       </ButtonsContainer>
-      <SpinnerContainer isLoading={isLoading}>
-        <Spinner />
-      </SpinnerContainer>
-      <InfoContainer isShowCatInfo={isShowCatInfo}>
-        {info.map((info, index) => (
-          <InfoText>{info}</InfoText>
-        ))}
-      </InfoContainer>
+      <SpinnerContainer isLoading={isLoading}><Spinner /></SpinnerContainer>
+      
+      <InfoContainer isShowCatInfo={!!info.length}>{catFactElement}</InfoContainer>
+  
     </Lesson10Wrapper>
   );
 }

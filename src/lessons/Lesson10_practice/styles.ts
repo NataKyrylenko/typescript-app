@@ -44,6 +44,7 @@ flex-direction: row;
     display: ${({isShowCatInfo}) => isShowCatInfo ? 'flex' : 'none'};
     flex-direction: column;
     align-items: flex-start;
+    min-width: 100%;
     max-height: 700px;
     overflow: auto;
     padding: 15px;
