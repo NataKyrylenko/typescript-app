@@ -9,12 +9,13 @@ function LoginForm() {
         initialValues: {
           email: "",
           password: "",
+          termsOfUsing: false,
         } as LoginFormValues,
         onSubmit: (values: LoginFormValues) => {
           console.log(values);
         },
       });
-  console.log(formik);
+  // console.log(formik);
 
   return (
     <LoginFormComponent onSubmit={formik.handleSubmit}>
@@ -35,6 +36,7 @@ function LoginForm() {
         onInputChange={formik.handleChange}
         value={formik.values.password}
       />
+
       <Button type="submit" name="Login" />
     </LoginFormComponent>
   );
