@@ -20,5 +20,12 @@ export const EmployeeFormContainer = styled.form`
 export const InputsContainer = styled.div`
     ${commonEmployeeForm}
     flex-direction: row;
-    
+`;
+
+export const Checkbox = styled.input`
+width: 25px;
+height: 25px;
+`;
+export const CheckboxLabel = styled.label`
+font-size: 22px;
 `;
