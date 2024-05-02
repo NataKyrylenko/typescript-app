@@ -2,7 +2,7 @@ import Input from "components/Input/Input";
 import { Checkbox, CheckboxLabel, EmployeeFormContainer, InputsContainer } from "./styles";
 import Button from "components/Button/Button";
 import { useFormik } from "formik";
-import { EmployeeFormValues } from "./types";
+import {EmployeeFormValues} from "./types";
 
 function EmployeeForm() {
   const formik = useFormik({
@@ -67,7 +67,6 @@ function EmployeeForm() {
           type="checkbox"
           onChange={formik.handleChange}
           checked={formik.values.isTerms}
-
         />
         <CheckboxLabel htmlFor="agreement-id">I Agree</CheckboxLabel>
       </InputsContainer>
