@@ -1,5 +1,5 @@
 import Input from "components/Input/Input";
-import { EmployeeFormContainer, InputsContainer } from "./styles";
+import { Checkbox, CheckboxLabel, EmployeeFormContainer, InputsContainer } from "./styles";
 import Button from "components/Button/Button";
 import { useFormik } from "formik";
 import { EmployeeFormValues } from "./types";
@@ -11,7 +11,7 @@ function EmployeeForm() {
       surname: "",
       age: "",
       position: "",
-      isTerms: "false",
+      isTerms: false,
     } as EmployeeFormValues,
     onSubmit: (values: EmployeeFormValues) => {
       console.log(values);
@@ -61,17 +61,18 @@ function EmployeeForm() {
         />
       </InputsContainer>
       <InputsContainer>
-        <Input
+        <Checkbox
+          id="agreement-id"
           name="isTerms"
           type="checkbox"
-          placeholder=""
-          label="Terms of Use"
-          onInputChange={formik.handleChange}
-          value={formik.values.isTerms}
+          onChange={formik.handleChange}
+          checked={formik.values.isTerms}
+
         />
+        <CheckboxLabel htmlFor="agreement-id">I Agree</CheckboxLabel>
       </InputsContainer>
 
-      <Button type="submit" name="Create" />
+      <Button type="submit" name="Create" disabled={!formik.values.isTerms}/>
     </EmployeeFormContainer>
   );
 }

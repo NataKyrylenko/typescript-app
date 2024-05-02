@@ -3,5 +3,5 @@ export interface EmployeeFormValues {
     surname:string,
     age:string,
     position: string,
-    isTerms: string,
+    isTerms: boolean,
 }
