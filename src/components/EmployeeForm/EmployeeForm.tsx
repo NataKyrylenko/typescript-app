@@ -16,7 +16,6 @@ function EmployeeForm() {
       .required("Filed is required")
       .min(3, "Min 3 symbols")
       .max(50, "Max 50 symbols"),
-    //[LOGIN_FIELD_NAMES.PASSWORD]:Yup.string().required('Filed password is required'),
     [EMPLOYEE_FIELD_NAMES.SURNAME]: Yup.string()
       .required("Filed is required")
       .max(15, "Max 15 symbols"),
@@ -44,8 +43,6 @@ function EmployeeForm() {
       console.log(values);
     },
   });
-
-  //console.log(formik);
 
   return (
     <EmployeeFormContainer onSubmit={formik.handleSubmit}>
@@ -103,7 +100,7 @@ function EmployeeForm() {
         <CheckboxLabel htmlFor="agreement-id">I Agree</CheckboxLabel>
       </InputsContainer>
 
-      <Button type="submit" name="Create" disabled={formik.values[EMPLOYEE_FIELD_NAMES.ISTERMS]} />
+      <Button type="submit" name="Create" disabled={!formik.values[EMPLOYEE_FIELD_NAMES.ISTERMS]} />
     </EmployeeFormContainer>
   );
 }
