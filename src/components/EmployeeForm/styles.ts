@@ -29,3 +29,9 @@ height: 25px;
 export const CheckboxLabel = styled.label`
 font-size: 22px;
 `;
+
+export const ErrorAgreementMessage = styled.p`
+    color: red;
+    font-size: 16px;
+    height: 18px;
+`;

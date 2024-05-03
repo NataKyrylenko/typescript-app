@@ -3,6 +3,7 @@ import {
   Checkbox,
   CheckboxLabel,
   EmployeeFormContainer,
+  ErrorAgreementMessage,
   InputsContainer,
 } from "./styles";
 import Button from "components/Button/Button";
@@ -14,18 +15,19 @@ function EmployeeForm() {
   const shema = Yup.object().shape({
     [EMPLOYEE_FIELD_NAMES.NAME]: Yup.string()
       .required("Filed is required")
-      .min(3, "Min 3 symbols")
+      .min(2, "Min 2 symbols")
       .max(50, "Max 50 symbols"),
     [EMPLOYEE_FIELD_NAMES.SURNAME]: Yup.string()
       .required("Filed is required")
       .max(15, "Max 15 symbols"),
     [EMPLOYEE_FIELD_NAMES.AGE]: Yup.number()
-      .typeError("Password must be number")
-      .required("Filed password is required")
+      .typeError("Age must be number")
+      .required("Filed age is required")
       .min(1, "Min 1 symbols")
-      .max(3, "Max 3 symbols"),
+      // .max(3, "Max 3 symbols"),
+      .test('check length', 'Max 3 symbol', value => String(value).length <=3),
     [EMPLOYEE_FIELD_NAMES.POSITION]: Yup.string().max(30, "Max 30 symbols"),
-    [EMPLOYEE_FIELD_NAMES.ISTERMS]: Yup.boolean(),
+    [EMPLOYEE_FIELD_NAMES.ISTERMS]: Yup.boolean().oneOf([true],'Accept agreement'),
   });
 
   const formik = useFormik({
@@ -51,7 +53,7 @@ function EmployeeForm() {
           name={EMPLOYEE_FIELD_NAMES.NAME}
           type="text"
           placeholder="Your name"
-          label="Name"
+          label="Name*"
           onInputChange={formik.handleChange}
           value={formik.values[EMPLOYEE_FIELD_NAMES.NAME]}
           error={formik.errors[EMPLOYEE_FIELD_NAMES.NAME]}
@@ -59,9 +61,8 @@ function EmployeeForm() {
 
         <Input
           name={EMPLOYEE_FIELD_NAMES.SURNAME}
-          type="text"
           placeholder="Your surname"
-          label="Surname"
+          label="Surname*"
           onInputChange={formik.handleChange}
           value={formik.values[EMPLOYEE_FIELD_NAMES.SURNAME]}
           error={formik.errors[EMPLOYEE_FIELD_NAMES.SURNAME]}
@@ -70,9 +71,8 @@ function EmployeeForm() {
       <InputsContainer>
         <Input
           name={EMPLOYEE_FIELD_NAMES.AGE}
-          type="number"
           placeholder="Your age"
-          label="Age"
+          label="Age*"
           onInputChange={formik.handleChange}
           value={formik.values[EMPLOYEE_FIELD_NAMES.AGE]}
           error={formik.errors[EMPLOYEE_FIELD_NAMES.AGE]}
@@ -80,7 +80,6 @@ function EmployeeForm() {
 
         <Input
           name={EMPLOYEE_FIELD_NAMES.POSITION}
-          type="text"
           placeholder="Your position"
           label="Position"
           onInputChange={formik.handleChange}
@@ -97,9 +96,9 @@ function EmployeeForm() {
           onChange={formik.handleChange}
           checked={formik.values[EMPLOYEE_FIELD_NAMES.ISTERMS]}
         />
-        <CheckboxLabel htmlFor="agreement-id">I Agree</CheckboxLabel>
+        <CheckboxLabel htmlFor="agreement-id">I Agree *</CheckboxLabel>
       </InputsContainer>
-
+      <ErrorAgreementMessage>{formik.errors[EMPLOYEE_FIELD_NAMES.ISTERMS]}</ErrorAgreementMessage>
       <Button type="submit" name="Create" disabled={!formik.values[EMPLOYEE_FIELD_NAMES.ISTERMS]} />
     </EmployeeFormContainer>
   );

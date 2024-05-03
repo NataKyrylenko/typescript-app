@@ -1,5 +1,11 @@
 import GlobalStyles from "styles/GlobalStyles";
 import Layout from "components/Layout/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "pages/Home/Home";
+import About from "pages/About/About";
+import Users from "pages/Users/Users";
+
+
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
 //import Lesson07 from './lessons/Lesson07/Lesson07';
@@ -10,16 +16,21 @@ import Layout from "components/Layout/Layout";
 //import Homework09 from 'homeworks/Homework09/Homework09';
 //import Lesson10 from "lessons/Lesson10_practice/Lesson10";
 //import Lesson11 from "lessons/lesson11/Lesson11";
-import Homework11 from "homeworks/Homework11/Homework11";
+//import Homework11 from "homeworks/Homework11/Homework11";
 //import Lesson12 from "lessons/lesson12/Lesson12";
-
-
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyles />
-      <Layout/>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/users" element={<Users/>} />
+          <Route path="*" element='Page Not Found'/>
+        </Routes>
+      </Layout>
       {/* <Lesson06/> */}
       {/* <Homework06/> */}
       {/* <Lesson07/> */}
@@ -30,9 +41,9 @@ function App() {
       {/* <Homework09/> */}
       {/* <Lesson10/> */}
       {/* <Lesson11/> */}
-      <Homework11/>
+      {/* <Homework11/> */}
       {/* <Lesson12/> */}
-    </>
+    </BrowserRouter>
   );
 }
 

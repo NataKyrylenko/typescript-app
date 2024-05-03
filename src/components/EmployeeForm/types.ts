@@ -6,6 +6,8 @@ export interface EmployeeFormValues {
     isTerms: boolean,
 }
 
+
+
 export enum EMPLOYEE_FIELD_NAMES {
     NAME = 'name',
     SURNAME = 'surname',
