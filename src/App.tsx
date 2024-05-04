@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "pages/Home/Home";
 import About from "pages/About/About";
 import Users from "pages/Users/Users";
+import Clients from "pages/Clients/Clients";
 
 
 //import Lesson06 from './lessons/lesson06/Lesson06';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/users" element={<Users/>} />
+          <Route path="/clients" element={<Clients/>} />
           <Route path="*" element='Page Not Found'/>
         </Routes>
       </Layout>

@@ -8,7 +8,7 @@ function Users() {
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
+    
     const goTOHomePage = () => {
         navigate('/')
     }

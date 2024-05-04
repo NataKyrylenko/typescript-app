@@ -42,6 +42,15 @@ function Layout({ children }: LayotProps) {
           >
             Users
           </StyledNavLink>
+          <StyledNavLink
+            to="/clients"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Clients
+          </StyledNavLink>
+
         </NavContainer>
       </Header>
 
