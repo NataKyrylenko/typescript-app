@@ -19,8 +19,8 @@ export const Header = styled.header`
 `;
 
 export const HeaderLogoContainer = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 `;
 
 export const HeaderLogo = styled.img`

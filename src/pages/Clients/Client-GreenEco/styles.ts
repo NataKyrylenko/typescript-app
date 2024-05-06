@@ -1,19 +1,21 @@
 import styled from "@emotion/styled";
 
-export const CreenEcoContainer = styled.div`
+export const GreenEcoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    width: 75%;
+    width: 30%;
     align-items: center;
+    height: 40vh;
+    justify-content: space-between;
 `;
 
-export const CreenEcoTitle = styled.h2`
-    font-size: 32px;
+export const GreenEcoTitle = styled.h2`
+    font-size: 26px;
     color: #5285FA; 
 `;
 
-export const CreenEcoInfo = styled.p`
-    font-size: 22px;
+export const GreenEcoInfo = styled.p`
+    font-size: 18px;
 `;
