@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 //import GreenEco from "./Client-GreenEco/GreeenEco";
 import { GreenEco, Quantum, Zenith } from "assets";
+import { Link } from "react-router-dom";
 
 export const ClientsPageContainer = styled.div`
   display: flex;
@@ -9,21 +10,21 @@ export const ClientsPageContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  margin: 40px auto ;
+  margin: 40px auto;
 `;
 
 export const ClientsPageTitle = styled.h2`
-    font-size: 25px;
-    color: #06006f;
+  font-size: 25px;
+  color: #06006f;
 `;
 
 export const ClientsLogosContainer = styled.div`
-display: flex;
-flex-direction: row;
-gap: 25px;
-`
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+`;
 
-export const ClientsLogoContainer = styled.div`
+export const ClientsLogoContainer = styled(Link)`
   width: 200px;
   height: 200px;
   padding: 20px;
@@ -35,16 +36,20 @@ export const ClientsLogoGreenEco = styled.img`
   width: 100%;
   height: 100%;
 `;
-ClientsLogoGreenEco.defaultProps = {src: GreenEco};
+ClientsLogoGreenEco.defaultProps = { src: GreenEco };
 
-export const ClientsLogoQuantumGen= styled.img`
+export const ClientsLogoQuantumGen = styled.img`
   width: 100%;
   height: 100%;
 `;
-ClientsLogoQuantumGen.defaultProps = {src: Quantum};
+ClientsLogoQuantumGen.defaultProps = { src: Quantum };
 
 export const ClientsLogoZenith = styled.img`
   width: 100%;
   height: 100%;
 `;
-ClientsLogoZenith.defaultProps = {src: Zenith};
+ClientsLogoZenith.defaultProps = { src: Zenith };
+
+export const ButtonContainer = styled.div`
+  width: 30%;
+`;

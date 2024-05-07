@@ -5,7 +5,9 @@ import Home from "pages/Home/Home";
 import About from "pages/About/About";
 import Users from "pages/Users/Users";
 import Clients from "pages/Clients/Clients";
-
+import GreenEco from "pages/Clients/Client-GreenEco/GreeenEco";
+import QuantumGen from "pages/Clients/Client-QuantumGen/QuantumGen";
+import ZenithRobotics from "pages/Clients/Client-ZenithRobotics/ZenithRobotics";
 
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
@@ -26,13 +28,18 @@ function App() {
       <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/users" element={<Users/>} />
-          <Route path="/clients" element={<Clients/>} />
-          <Route path="*" element='Page Not Found'/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/clients" element={<Clients children={undefined} />} />
+          <Route path="/clients/greenEco" element={<GreenEco />} />
+          <Route path="/clients/quantumGen" element={<QuantumGen />} />
+          <Route path="/clients/zenithRobotics" element={<ZenithRobotics />} />
+
+          <Route path="*" element="Page Not Found" />
         </Routes>
       </Layout>
+
       {/* <Lesson06/> */}
       {/* <Homework06/> */}
       {/* <Lesson07/> */}

@@ -1,33 +1,36 @@
 //import GreenEco from "./Client-GreenEco/GreeenEco";
 //import QuantumGen from "./Client-QuantumGen/QuantumGen";
 //import ZenithRobotics from "./Client-ZenithRobotics/ZenithRobotics";
-import { ClientsLogoContainer, ClientsLogoGreenEco, ClientsLogoQuantumGen, ClientsLogoZenith, ClientsLogosContainer, ClientsPageContainer, ClientsPageTitle } from "./styles";
+import {
+  ClientsLogoContainer,
+  ClientsLogoGreenEco,
+  ClientsLogoQuantumGen,
+  ClientsLogoZenith,
+  ClientsLogosContainer,
+  ClientsPageContainer,
+  ClientsPageTitle,
+} from "./styles";
+import { ClientsProps } from "./types";
 
-function Clients() {
-    return (
-        <ClientsPageContainer>
-            <ClientsPageTitle>
-               Our Clients:
-            </ClientsPageTitle>
-            
-            <ClientsLogosContainer>
-            <ClientsLogoContainer>
-                <ClientsLogoGreenEco/>
-            </ClientsLogoContainer>
+function Clients({ children }: ClientsProps) {
+  return (
+    <ClientsPageContainer>
+      <ClientsPageTitle>Our Clients:</ClientsPageTitle>
 
-            <ClientsLogoContainer>
-                <ClientsLogoQuantumGen/>
-            </ClientsLogoContainer>
+      <ClientsLogosContainer>
+        <ClientsLogoContainer to="/clients/greenEco">
+          <ClientsLogoGreenEco />
+        </ClientsLogoContainer>
 
-            <ClientsLogoContainer>
-                <ClientsLogoZenith/>
-            </ClientsLogoContainer>
+        <ClientsLogoContainer to="/clients/quantumGen">
+          <ClientsLogoQuantumGen />
+        </ClientsLogoContainer>
 
-            {/* <GreenEco/>
-            <QuantumGen/>
-            <ZenithRobotics/> */}
-            </ClientsLogosContainer>
-        </ClientsPageContainer>
-    )
+        <ClientsLogoContainer to="/clients/zenithRobotics">
+          <ClientsLogoZenith />
+        </ClientsLogoContainer>
+      </ClientsLogosContainer>
+    </ClientsPageContainer>
+  );
 }
 export default Clients;

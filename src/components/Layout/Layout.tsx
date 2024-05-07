@@ -14,7 +14,7 @@ function Layout({ children }: LayotProps) {
   return (
     <LayoutComponent>
       <Header>
-        <HeaderLogoContainer>
+        <HeaderLogoContainer to='/'>
           <HeaderLogo />
         </HeaderLogoContainer>
         <NavContainer>
@@ -57,7 +57,7 @@ function Layout({ children }: LayotProps) {
       <Main>{children}</Main>
 
       <Footer>
-        <HeaderLogoContainer>
+        <HeaderLogoContainer to='/'>
           <HeaderLogo />
         </HeaderLogoContainer>
       </Footer>
