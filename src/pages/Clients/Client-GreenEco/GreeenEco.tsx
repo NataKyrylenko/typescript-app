@@ -8,7 +8,7 @@ function GreenEco() {
 
   const navigate = useNavigate();
   const goToPreviusPage = () => {
-    navigate("/clients");
+    navigate(-1);
   };
 
   return (
