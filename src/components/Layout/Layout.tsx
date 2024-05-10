@@ -14,7 +14,7 @@ function Layout({ children }: LayotProps) {
   return (
     <LayoutComponent>
       <Header>
-        <HeaderLogoContainer>
+        <HeaderLogoContainer to='/'>
           <HeaderLogo />
         </HeaderLogoContainer>
         <NavContainer>
@@ -42,13 +42,22 @@ function Layout({ children }: LayotProps) {
           >
             Users
           </StyledNavLink>
+          <StyledNavLink
+            to="/clients"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Clients
+          </StyledNavLink>
+
         </NavContainer>
       </Header>
 
       <Main>{children}</Main>
 
       <Footer>
-        <HeaderLogoContainer>
+        <HeaderLogoContainer to='/'>
           <HeaderLogo />
         </HeaderLogoContainer>
       </Footer>
