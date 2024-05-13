@@ -8,6 +8,7 @@ import Clients from "pages/Clients/Clients";
 import GreenEco from "pages/Clients/Client-GreenEco/GreeenEco";
 import QuantumGen from "pages/Clients/Client-QuantumGen/QuantumGen";
 import ZenithRobotics from "pages/Clients/Client-ZenithRobotics/ZenithRobotics";
+import Lesson14 from "lessons/lesson14/Lesson14";
 
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
@@ -26,7 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -38,7 +39,7 @@ function App() {
 
           <Route path="*" element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
 
       {/* <Lesson06/> */}
       {/* <Homework06/> */}
@@ -52,6 +53,7 @@ function App() {
       {/* <Lesson11/> */}
       {/* <Homework11/> */}
       {/* <Lesson12/> */}
+      <Lesson14/>
     </BrowserRouter>
   );
 }
