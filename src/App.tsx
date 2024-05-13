@@ -10,6 +10,7 @@ import QuantumGen from "pages/Clients/Client-QuantumGen/QuantumGen";
 import ZenithRobotics from "pages/Clients/Client-ZenithRobotics/ZenithRobotics";
 import Lesson14 from "lessons/lesson14/Lesson14";
 
+
 //import Lesson06 from './lessons/lesson06/Lesson06';
 //import Homework06 from './homeworks/Homework06/Homework06';
 //import Lesson07 from './lessons/Lesson07/Lesson07';
@@ -22,7 +23,7 @@ import Lesson14 from "lessons/lesson14/Lesson14";
 //import Lesson11 from "lessons/lesson11/Lesson11";
 //import Homework11 from "homeworks/Homework11/Homework11";
 //import Lesson12 from "lessons/lesson12/Lesson12";
-
+import Lesson15 from "lessons/lesson15_practice/Lesson15";
 function App() {
   return (
     <BrowserRouter>
@@ -53,7 +54,8 @@ function App() {
       {/* <Lesson11/> */}
       {/* <Homework11/> */}
       {/* <Lesson12/> */}
-      <Lesson14/>
+      {/* <Lesson14/> */}
+      <Lesson15/>
     </BrowserRouter>
   );
 }
